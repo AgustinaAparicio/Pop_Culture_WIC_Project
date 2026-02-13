@@ -1,0 +1,184 @@
+/*** body ***
+  Purpose:
+  - Add style rules for the body of your webpage
+  - This is useful if you want a rule to apply to EVERYTHING on your page
+    - (Tip: You can always override these rules later in the stylesheet)
+***/
+/* Header using Flexbox */
+.header-container {
+    display: flex;              /* Enable flexbox layout */
+    flex-direction: row;        /* Align items in a row (column for vertical) */
+    text-align: center;         /* Optional: Center the text inside the header */
+    margin-top: 20px;           /* Optional: Adjust top margin */
+}
+
+
+body {
+    /* Add a background color or image */
+    background-color: var(--bg-color); /* see bottom of file for color variables */
+
+
+    /* Customize the default size, color, and font for text*/
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+
+
+    /* Put space around the edges of the webpage */
+    margin: 50px;
+}
+
+
+/*** Text ***
+  Purpose:
+  - Add style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons
+***/
+
+
+h1 {
+   
+}
+
+
+h2 {
+   
+}
+
+
+h3 {
+   
+}
+
+
+h4 {
+   
+}
+
+
+p {
+   
+}
+
+
+a,
+a * {
+   
+}
+
+
+button {
+    /* Example Style, replace with your own! */
+    background-color: green;    /* button color */
+    color: white;               /* text color */
+    border: none;               /* hides the default border */
+    padding: 5px 12px;          /* space between button's text and edge */
+    border-radius: 5px;         /* curved edges instead of square */
+    cursor: pointer;            /* makes the cursor change when over button */
+}
+
+
+button:hover {
+    /* Make the button look different when the user hovers over it */
+    background-color: yellow;
+}
+
+
+/*** header ***
+  Purpose:
+  - Add style rules for your website's header section
+***/
+
+
+.header { /* Example A: This styles elements with class="header" */
+   
+}
+
+
+/*** footer ***
+  Purpose:
+  - Add style rules for your website's footer section
+***/
+
+
+.footer { /* Example B: This styles elements with class="footer" */
+   
+}
+
+
+/*** Navigation bar (navbar) ***
+  Purpose:
+  - Add style rules for your website's navbar
+***/
+
+
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+}
+
+
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+
+.navbar ul li a { 
+}
+
+
+.navbar ul li a:hover {
+}
+
+
+
+
+/*** About Section ***
+  Purpose:
+  - Add style rules for your website's About section
+***/
+
+
+
+
+/*** Links Section ***
+  Purpose:
+  - Add style rules for your website's Links section
+***/
+
+
+
+
+/*** Dark Mode [PLACEHOLDER] ***/
+
+
+/*** Custom Colors (OPTIONAL) ***
+  Purpose:
+  - Use CSS variables to define custom colors for your website
+  - To reference a color variable in your css, use var(--variable-name) in place of a color value
+***/
+
+
+:root {
+    /* Light Mode */
+    --bg-color: #a6a0cf;
+    --text-color: #231942;
+
+
+    /* Dark Mode */
+    --bg-color-dark-mode: #3e3377;
+    --text-color-dark-mode: #fff;
+
+
+    /* Accent Colors */
+    --accent-color-light: #d2cff5;
+    --accent-color-medium: #684fb5;
+    --accent-color-dark: #482f95;
+    --accent-color-darkest: #231942;
+    --accent-color-green: #28eb76;
+
+
+    /* Error Colors */
+    --error-color: #f8bbd0;
+    --error-color-border: #e63946;
+}
