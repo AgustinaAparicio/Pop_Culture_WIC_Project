@@ -217,7 +217,6 @@ li {
     flex-wrap: wrap;
     list-style: none;
     background-color: var(--text-color);
-    color: white;
     overflow: hidden;
     position: fixed; 
     top: 0;
@@ -234,7 +233,7 @@ li {
     float: left; 
 }
 
-.navbar ul li a { 
+.navbar ul li a, .navbar ul li a:link { 
     color: white;
     border-bottom: 1px solid transparent;
     font-weight: 600;
@@ -246,7 +245,7 @@ li {
 }
 
 .navbar ul li a:visited {
-    color: var(--accent-color-medium);
+    color: var(white);
 }
 
 .navbar ul li a:hover {
@@ -316,7 +315,7 @@ li {
 
 /* Example: Different dark mode style for visited links */
 .dark-mode a:visited{
-  color: var(--accent-color-medium);
+  color: var(--accent-color-light);
 }
 
 .dark-mode a:active{
@@ -352,12 +351,16 @@ li {
   color: var(--accent-color-dark); 
 }
 
+.dark-mode li {
+    color: white !important;
+}
+
 .dark-mode .navbar ul {
     background-color: var(--accent-color-darkest);  
     color: var(--text-color-dark-mode);
 }
 
-.dark-mode .navbar ul li a {
+.dark-mode .navbar ul li a, .dark-mode .navbar ul li a:link {
     color: var(--text-color-dark-mode);  
 }
 
@@ -371,8 +374,8 @@ li {
 }
 
 .dark-mode .navbar ul li a:active {
-    color: var(--accent-color-light);
-    border-bottom: 1px solid var(--accent-color-light);
+    color: var(--error-color);
+    border-bottom: 1px solid var(--error-color);
 }
 
 /* Add style to button */
@@ -387,8 +390,7 @@ li {
 }
 
 .dark-mode #theme-button:active {
-    color: var(--accent-color-light);
-    border-color: var(--accent-color-light);
+    color: var(--accent-color-green);
 }
 
 .dark-mode .footer {
@@ -404,6 +406,9 @@ li {
 .dark-mode .footer div {
     color: white !important;
 }
+
+
+
 
 /*** Custom Colors (OPTIONAL) ***
   Purpose:
