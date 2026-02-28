@@ -7,10 +7,17 @@
 /* Header using Flexbox */
 .header-container {
     display: flex;              /* Enable flexbox layout */
-    flex-direction: row;        /* Align items in a row (column for vertical) */
+    flex-direction: column;        /* Align items in a row (column for vertical) */
     text-align: center;         /* Optional: Center the text inside the header */
     margin-top: 20px;           /* Optional: Adjust top margin */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    margin: 50px; 
+    padding-top: 50px;
 }
+
 
 
 body {
@@ -21,11 +28,14 @@ body {
     /* Customize the default size, color, and font for text*/
     font-size: 16px;
     color: var(--text-color);
-    font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+    font-family: 'Helvetica', 'Arial', sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
 
 
     /* Put space around the edges of the webpage */
     margin: 50px;
+
+    /* Space for footer */
+    padding-bottom: 50px;
 }
 
 
@@ -37,62 +47,135 @@ body {
 
 
 h1 {
-   
+   font-size: 2.5rem;
+   font-weight: 700;
+   color: var(--accent-color-darkest);
+   margin: 1rem;
+   letter-spacing: 1px;
+   font-size: 55px;
+   font-weight: 50px;
+   text-align: center;
+   font-family: 'Impact', 'Arial Black', sans-serif;
 }
 
 
+
 h2 {
-   
+   font-size: 2rem;
+   font-weight: 600;
+   color: var(--accent-color-dark);
+   margin: 1rem;
+   font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 
 h3 {
-   
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-color-medium);
+    margin: 1rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 
 h4 {
-   
+    font-size: 1.25rem;
+   font-weight: 600;
+   color: var(--accent-color-medium);
+   margin: 1rem;
+   font-family: 'Georgia', 'Times New Roman', serif;
 }
+
 
 
 p {
-   
+    margin: 1rem;
+    color: var(--text-color);
+    font-family: 'Palatino', 'Book Antiqua', 'Georgia', serif;
+    padding-left: 10px;
 }
 
 
-a,
-a * {
-   
+a:link {
+    color: var(--accent-color-dark);
+    border-bottom: 1px solid transparent;
 }
 
+a:visited {
+    color: var(--accent-color-medium);
+}
+
+/* Links - Hover state (mouse over) */
+a:hover {
+    color: var(--accent-color-green);
+    border-bottom: 1px solid var(--accent-color-green);
+    cursor: pointer;
+}
+
+/*** Links Section ***
+  Purpose:
+  - Add style rules for your website's Links section
+***/
+/* Links - Active state (being clicked) */
+a:active {
+    color: var(--accent-color-darkest);
+    border-bottom: 1px solid var(--accent-color-darkest);
+}
 
 button {
-    /* Example Style, replace with your own! */
-    background-color: green;    /* button color */
-    color: white;               /* text color */
-    border: none;               /* hides the default border */
+    background-color: var(--text-color); /* button color */
+    color: var(--bg-color);   /* text color */
+    border: 2px solid black;
     padding: 5px 12px;          /* space between button's text and edge */
-    border-radius: 5px;         /* curved edges instead of square */
+    border-radius: 20px;         /* curved edges instead of square */
+    margin: 5px;
     cursor: pointer;            /* makes the cursor change when over button */
+    font-family: 'Palatino', 'Book Antiqua', 'Georgia', serif;
 }
-
 
 button:hover {
     /* Make the button look different when the user hovers over it */
-    background-color: yellow;
+    background-color: var(--accent-color-dark); 
+    color: white; 
 }
-
 
 /*** header ***
   Purpose:
   - Add style rules for your website's header section
 ***/
-
-
-.header { /* Example A: This styles elements with class="header" */
-   
+/* Target header items using nth-of-type pseudo-classes */
+/* image */
+.header-item:nth-of-type(1) { 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
 }
+
+/* h1 and h3*/
+.header-item:nth-of-type(2), .header-item:nth-of-type(3) { 
+    /* Style for the second item (could be the first button, image, or text) */
+    width: 100%;                 
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+/* button 1 and 2 */
+.header-item:nth-of-type(4), .header-item:nth-of-type(5)  {
+    text-align: center;
+    line-height: normal;
+    border: 2px solid black;  /* White border for header buttons */
+    padding: 8px 20px;         /* Slightly larger padding for header */
+    font-size: 10rem;         /* Bigger text */
+    min-width: 100px;  
+}
+
+
+li {
+    font-family: 'Palatino', 'Book Antiqua', 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+} 
 
 
 /*** footer ***
@@ -102,9 +185,22 @@ button:hover {
 
 
 .footer { /* Example B: This styles elements with class="footer" */
-   
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: var(--text-color);
+   color: white;
+   padding: 10px;
 }
 
+.footer,
+.footer p,
+.footer a,
+.footer span,
+.footer div {
+    color: white !important;
+}
 
 /*** Navigation bar (navbar) ***
   Purpose:
@@ -114,43 +210,200 @@ button:hover {
 
 .navbar ul {
     z-index: 1000; /* Ensures the navbar is on top of other elements */
-}
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: var(--text-color);
+    color: white;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 5px; 
+    margin-top: 0px;
 
+}
 
 .navbar ul li {
-    float: left;
     margin: 10px;
+    padding: 2px; 
+    float: left; 
 }
-
 
 .navbar ul li a { 
+    color: white;
+    border-bottom: 1px solid transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px; 
 }
 
+.navbar ul li a:visited {
+    color: var(--accent-color-medium);
+}
 
 .navbar ul li a:hover {
+    color: var(--accent-color-green);
+    border-bottom: 1px solid var(--accent-color-green);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
+.navbar ul li a:active {
+    color: var(--accent-color-darkest);
+    border-bottom: 1px solid var(--accent-color-darkest);
+}
 
+#theme-button {
+    background: none;                    
+    color: white; 
+    border: 1px solid white;            
+    border-radius: 20px;                
+    padding: 5px 16px;           
+    font-family: 'Trebuchet MS', 'Lucida Grande', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#theme-button:hover {
+    color: var(--accent-color-green);      
+    border-color: var(--accent-color-green); 
+    background: none;                 
+    transform: translateY(-2px);
+}
+
+#theme-button:active {
+    color: var(--accent-color-darkest);
+    border-color: var(--accent-color-darkest);
+}
 
 
 /*** About Section ***
   Purpose:
   - Add style rules for your website's About section
 ***/
+.about-project-intro {
+    padding-bottom: 15px;
+}
 
 
 
 
-/*** Links Section ***
-  Purpose:
-  - Add style rules for your website's Links section
-***/
+/*** Dark Mode ***/
+/* Default dark mode style */
+.dark-mode {
+  background-color: var(--bg-color-dark-mode);
+  color: var(--text-color-dark-mode);
+}
+
+.dark-mode button{
+  background-color: var(--text-color-dark-mode); /* button color */
+  color: var(--bg-color-dark-mode);   /* text color */
+}
+
+.dark-mode a:link{
+  color: var(--accent-color-light);
+    border-bottom: 1px solid transparent;
+}
+
+/* Example: Different dark mode style for visited links */
+.dark-mode a:visited{
+  color: var(--accent-color-medium);
+}
+
+.dark-mode a:active{
+  color: var(--accent-color-light);
+    border-bottom: 1px solid var(--accent-color-light);
+}
+
+/* Example: Different dark mode style for h1 */
+.dark-mode h1 {
+  color: #EFF6A5;
+}
+
+.dark-mode body{
+  background-color: var(--bg-color-dark-mode);
+  color: var(--text-color-dark-mode);
+}
+
+.dark-mode h2, .dark-mode h3, .dark-mode h4{ 
+  color: var(--accent-color-light);
+}
+
+.dark-mode p{
+  color: var(--text-color-dark-mode)
+}
+
+.dark-mode button{
+  background-color: var(--text-color-dark-mode);  
+  color: var(--bg-color-dark-mode);   
+}
+
+.dark-mode button:hover{
+  background-color: white;
+  color: var(--accent-color-dark); 
+}
+
+.dark-mode .navbar ul {
+    background-color: var(--accent-color-darkest);  
+    color: var(--text-color-dark-mode);
+}
+
+.dark-mode .navbar ul li a {
+    color: var(--text-color-dark-mode);  
+}
+
+.dark-mode .navbar ul li a:visited {
+    color: var(--accent-color-light);  
+}
+
+.dark-mode .navbar ul li a:hover {
+    color: var(--accent-color-green);
+    border-bottom: 1px solid var(--accent-color-green);
+}
+
+.dark-mode .navbar ul li a:active {
+    color: var(--accent-color-light);
+    border-bottom: 1px solid var(--accent-color-light);
+}
+
+/* Add style to button */
+.dark-mode #theme-button {
+    color: var(--text-color-dark-mode);
+    border: 1px solid var(--text-color-dark-mode);
+}
+
+.dark-mode #theme-button:hover {
+    color: var(--accent-color-green);
+    border-color: var(--accent-color-green);
+}
+
+.dark-mode #theme-button:active {
+    color: var(--accent-color-light);
+    border-color: var(--accent-color-light);
+}
+
+.dark-mode .footer {
+    background-color: var(--accent-color-darkest);  
+    color: var(--text-color-dark-mode);
+}
 
 
-
-
-/*** Dark Mode [PLACEHOLDER] ***/
-
+.dark-mode .footer,
+.dark-mode .footer p,
+.dark-mode .footer a,
+.dark-mode .footer span,
+.dark-mode .footer div {
+    color: white !important;
+}
 
 /*** Custom Colors (OPTIONAL) ***
   Purpose:
@@ -160,25 +413,26 @@ button:hover {
 
 
 :root {
+    /* using red, gold, yellow colors */ 
     /* Light Mode */
-    --bg-color: #a6a0cf;
-    --text-color: #231942;
+    --bg-color: #FBDB93;
+    --text-color: #6A2E2E;
 
 
     /* Dark Mode */
-    --bg-color-dark-mode: #3e3377;
-    --text-color-dark-mode: #fff;
+    --bg-color-dark-mode: #8d1515;
+    --text-color-dark-mode: #ffffff;
 
 
     /* Accent Colors */
-    --accent-color-light: #d2cff5;
-    --accent-color-medium: #684fb5;
-    --accent-color-dark: #482f95;
-    --accent-color-darkest: #231942;
-    --accent-color-green: #28eb76;
+    --accent-color-light: #FFC1C3;
+    --accent-color-medium: #F45156;
+    --accent-color-dark: #C6373C;
+    --accent-color-darkest: #400c0c; 
+    --accent-color-green: #D4D925;
 
 
     /* Error Colors */
-    --error-color: #f8bbd0;
-    --error-color-border: #e63946;
+    --error-color: #FF6F61;
+    --error-color-border: #FA1E0E;
 }
