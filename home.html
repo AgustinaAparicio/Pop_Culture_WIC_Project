@@ -3,80 +3,139 @@
 
 
 <head>
-    <title>Your Topic Here</title> <!-- the content here will only show in the tab and in the metadata about the page -->
+    <title>Bruno Mars • Fan Site</title> <!-- the content here will only show in the tab and in the metadata about the page -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyeGdienN3OWRjYnhoajg3bzc3NGFnMzU4ZzY1c3RtNXhnaGJtZzBqcSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/tVt22pg3by6XcN8ePZ/giphy_s.gif"> <!-- icon for browser window -->
     <link href="reset.css" rel="stylesheet" type="text/css" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 
 <body>
-	<!--- NAVBAR (to-do later) --->
-    <div class="content">
+	<!--- NAVBAR --->
+    <nav class="navbar">
+      <ul>
+        <!-- Main navigation -->
+        <li><a href="#title-startpage">Home</a></li>
+        <li><a href="#about-content">About</a></li>
+        <li><a href="#resources-grid">Resources</a></li>
+        
+        <!-- games/other content -->
+        <li><a href="career.html">Career</a></li>
+        <li><a href="games/bracketGame.html">Bracket Game</a></li>
+        <li><a href="games/nameSongsQuiz.html">Name That Song</a></li>
+        <li><a href="fanProject.html">Fan Project</a></li>
+        
+        <!-- Theme toggle button -->
+        <li><button id="theme-button">Toggle Theme</button></li>
+      </ul>
+    </nav>
 
+  <!-- combining these into the navbar 
 
-  
-
-
+  <div class="content">
   <div class="college-grid">
 
     <a class="college-btn" href="career.html">career</a>
     <a class="college-btn" href="games/bracketGame.html">Bracket Game</a>
     <a class="college-btn" href="games/nameSongsQuiz.html">Name as Many Songs Quiz</a>
-    <a class="college-btn" href="fanProject.html">Fan Project</a>
-    
-    
+    <a class="college-btn" href="fanProject.html">Fan Project</a>    
   </div>
+  </div>
+  -->
 
-
-  <h2 style="margin-top:50px;">About This Project</h2>
-  <p>
-    This website helps UCSD students — especially first-years — understand the differences between the colleges and find the right academic and residential fit.
-  </p>
-
-
-    </div>
 
 
     <!--- HEADINGS--->
      <header class="header-container">
-        <img src="your-image.jpg" alt="Header Image" class="header-item" /> <!-- if you want to add an image, use this tag and link to the actual image location in your project with the src attribute -->
-        <h1 class="header-item">My Pop Culture Project: Bruno Mars</h1> <!-- First Text -->
-        <h3 class="header-item">Short description about topic</h3> <!-- Second Text -->
-        <button class="header-item" type="button">oooh this is a button</button> <!-- First Button -->
-        <button class="header-item" type="button">another button!</button> <!-- Second Button -->
+        <!-- <img src="https://www.trendycovers.com/covers/Bruno_Mars_1325500047.jpg" alt="Header Image" class="header-item" /> if you want to add an image, use this tag and link to the actual image location in your project with the src attribute -->
+        <h1 class="header-item" id = "title-startpage">Bruno Mars: A Modern Classic</h1> <!-- First Text -->
+        <h3 class="header-item">Exploring the man whose hits span decades, a beloved artist still revered today</h3> <!-- Second Text -->
+        <!-- First Button -->
+        <a href= "https://www.brunomars.com/tour" target="_blank">
+        <button class="header-item" type="button">Concerts Ticket</button>
+        </a>
+        <!-- Second Button -->
+        <a href= "https://store.brunomars.com/" target="_blank">
+        <button class="header-item" type="button">Merch Store</button>
+        </a>
     </header>
 
 
     <!--- ABOUT --->
-    <h2>About My Topic</h2>
-    <p>What is this website trying to educate others on? Who is the audience?
+    <section class="about-container"></section>
+    <div class = "about-project-intro">  
+     <h2 style="margin-top:50px;">About This Website</h2>
+     <p>
+       This website is a site for Bruno Mars fans looking to learn more about him and interact with his content. 
+    </div>
+    
+    <div class="about-content">
+    <h2 id = "about-content">About Bruno Mars</h2>
+    <p>Peter Gene Hernandez, more commonly known as Bruno Mars, has become one of the best-selling music artists of all time, with over 200 million records sold worldwide and 15 Grammy Awards. 
+      His ability to blend pop, R&B, funk, and soul has caused fans of all ages to fall in love with him and his music. The worldwide sensation has touched the hearts of millions across the globe with songs that are still as loved today as they were when first released.
     </p>
+    </div> 
 
-
+    <div class="about-video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ClqRJfiyhF0?si=OsxyUAgKFjQyU7bF" title="Bruno Mars performs 'I Just Might' at the 2026 Grammys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    <p><em>A video of Bruno Mars performing his newest single, "I Just Might," at the 68th Annual Grammy Awards in 2026.</em></p>
+    </div>
+    </section>
     <!--- DATA --->
-    <h3>Data about my topic</h3>
-    <img src="" />
-    <h4>Add some charts + captions that illustrate my topic and some interesting facts</h4>
+    <section class="data-container">
+    <h3>Facts about Bruno Mars</h3>
+    <img src="img/bruno_stage.webp" alt="Bruno Mars singing on stage at a sold-out venue"  width="700" height="400"/>
+    <p><em>A photo of Bruno Mars on stage singing at his sold-out concert at the opening of Intuit Dome in Los Angeles.</em></p>
 
+
+    <h4>Some facts about Bruno Mars: </h4>
 
     <ul>
-        <li> less than 15%</li>
-        <li> 15%-25%</li>
-        <li> 25%-35%</li>
-        <li> 35%-45%</li>
-        <li> >45%</li>
+        <li> Birthday: October 8, 1985</li>
+        <li> Born in: Honolulu, Hawaii</li>
+        <li> First artist to have six songs reach 7 million+ copies sold in the US</li>
+        <li> Started his career as a child impersonating Elvis Presley in Honolulu</li>
+        <li> "Uptown Funk" spent 14 weeks at #1 </li>
     </ul>
+    </section>
 
 
     <!--- Additional Resources --->
-    <h2>Additional Resources!</h2>
+    <section class="resources-container">
 
+    <div class="resources-grid">
+    <article class="resource-item">
+    <h2 id = "resources-grid">Additional Resources! Learn more about Bruno Mars!</h2>
+    <h3>Spotify Profile</h3>
+    <a href="https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C" target="_blank">Listen on Spotify!</a>
+    <p>Stream Bruno's complete discography, including his solo work and collaborations with other artists.</p>
+    </article>
 
-    <h3>Where can you learn more about this topic?</h3>
-    <a href="https://www.example.com/"> Visit this website!</a>
-    <p></p>
+    <article class="resource-item"> 
+    <h3>Grammy History</h3>
+    <a href="https://www.grammy.com/artists/bruno-mars/5082">Look at his Grammy History!</a>
+    <p>A look at Bruno's 15 Grammy wins and historic award show performances.</p>
+    </article>
+
+    <article class="resource-item"> 
+    <h3>Learn "The Romantic" Album</h3>
+    <a href="https://hypebeast.com/2026/2/bruno-mars-the-romantic-album-stream" target="_blank">Read about "The Romantic"</a>
+    <p>Read the news on Bruno's fourth solo album.</p>
+    </article>
+    </div>
+
+    </section>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- footer -->
+         <div class = "footer">
+            <p>Made by: Agustina Aparicio, Krishna Visanakarrala, Casey Lo, Jennifer Loya, and Pragnya Korti &hearts;</p>
+         </div>
+
 
 
 </body>
