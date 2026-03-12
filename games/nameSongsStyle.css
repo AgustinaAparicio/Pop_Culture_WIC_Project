@@ -1,7 +1,12 @@
+head{
+    margin:50px;
+}
+
 body{
     text-align:center;
     font-family:Arial;
-    background:#f5f5f5;
+    background:#FBDB93;
+    margin:100px;
 }
 
 button{

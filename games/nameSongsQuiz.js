@@ -95,7 +95,7 @@ function playClip() {
         playButton.textContent = "Playing Full Song";
     } else {
         if (playCount === 0) {
-            playTime = 1000; // 1 sec
+            playTime = 2000; // 2 sec
             playButton.textContent = "Try Again (5 sec)";
         } else if (playCount === 1) {
             playTime = 5000; // 5 sec
