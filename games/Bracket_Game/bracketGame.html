@@ -27,3 +27,103 @@
       </ul>
     </nav>
 </body>
+
+<head>
+  <title>Bruno Mars Bracket Tournament</title>
+  <link href="bracketGameStyles.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<h1>Bruno Mars Bracket Tournament</h1>
+
+<bh3>Step 1: Song Selection (select a minimum of 8 songs)</bh3><br>
+
+<bh5>Please select songs to be potentially included in the Bruno Mars Bracket Tournament Game!</bh5><br>
+
+
+<script src="bracketGameFunctions.js"></script>
+
+
+<button onclick="selectAll('a1'); selectAll('a2'); selectAll('a3'); selectAll('a4'); 
+selectAll('a5'); selectAll('a6');">
+Select All</button>
+<button onclick="clearAll('a1'); clearAll('a2'); clearAll('a3'); clearAll('a4'); 
+clearAll('a5'); clearAll('a6');">
+Clear All</button><br>
+
+<details id="a1">
+  <summary>Solo Album 1: Doo-Wops & Hooligans (Deluxe)
+    <input type="checkbox" id="a1-master" onchange="selectOrClearAll('a1-master','a1')">
+  </summary>
+  <div class="songs">
+    <label><input type="checkbox"> Song A</label><br>
+    <label><input type="checkbox"> Song B</label><br>
+    <label><input type="checkbox"> Song C</label><br>
+  </div>
+</details><br>
+
+<details id="a2">
+  <summary>Solo Album 2: Unorthodox Jukebox
+    <input type="checkbox" id="a2-master" onchange="selectOrClearAll('a2-master','a2')">
+  </summary>
+  <div class="songs">
+    <label><input type="checkbox"> Song D</label><br>
+    <label><input type="checkbox"> Song E</label><br>
+    <label><input type="checkbox"> Song F</label><br>
+  </div>
+</details><br>
+
+<details id="a3">
+  <summary>Solo Album 3: 24K Magic
+    <input type="checkbox" id="a3-master" onchange="selectOrClearAll('a3-master','a3')">
+  </summary>
+  <div class="songs">
+    <label><input type="checkbox"> Song A</label><br>
+    <label><input type="checkbox"> Song B</label><br>
+    <label><input type="checkbox"> Song C</label><br>
+  </div>
+</details><br>
+
+<details id="a4">
+  <summary>Solo Album 4: The Romantic
+    <input type="checkbox" id="a4-master" onchange="selectOrClearAll('a4-master','a4')">
+  </summary>
+  <div class="songs">
+    <label><input type="checkbox"> Song D</label><br>
+    <label><input type="checkbox"> Song E</label><br>
+    <label><input type="checkbox"> Song F</label><br>
+  </div>
+</details><br>
+
+<details id="a5">
+  <summary>Collab Album: An Evening With Silk Sonic
+    <input type="checkbox" id="a5-master" onchange="selectOrClearAll('a5-master','a5')">
+  </summary>
+  <div class="songs">
+    <label><input type="checkbox"> Song A</label><br>
+    <label><input type="checkbox"> Song B</label><br>
+    <label><input type="checkbox"> Song C</label><br>
+  </div>
+</details><br>
+
+<details id="a6">
+  <summary>Extras: Singles/Collabs
+    <input type="checkbox" id="a6-master" onchange="selectOrClearAll('a6-master','a6')">
+  </summary>
+  <div class="songs">
+    <label><input type="checkbox"> Uptown Funk</label><br>
+    <label><input type="checkbox"> Wake Up in the Sky</label><br>
+    <label><input type="checkbox"> Please Me</label><br>
+    <label><input type="checkbox"> BLOW</label><br>
+    <label><input type="checkbox"> Fat Juicy & Wet</label><br>
+    <label><input type="checkbox"> Bonde de Brunão</label><br>
+    <label><input type="checkbox"> Die With A Smile</label><br>
+    <label><input type="checkbox"> APT.</label>
+  </div>
+</details><br>
+
+<button onclick="startTournament()">Start Tournament</button>
+
+<div id="bracket"></div>
+
+</html>

@@ -1,0 +1,55 @@
+head{
+    background:#FBDB93;
+}
+
+body{
+    font-family: Arial;
+    text-align:center;
+    font-size:16px;
+    margin:100px
+}
+
+button{
+    margin:20px;
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+.bracket {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* space between rounds */
+    align-items: flex-start;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* space between matches */
+}
+
+.match button {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+    width: 120px;
+    text-align: center;
+}
+
+bh3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #C6373C;
+    margin: 20px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+bh5 {
+    
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 20px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
